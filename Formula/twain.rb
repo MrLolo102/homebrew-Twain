@@ -1,5 +1,5 @@
 
-#require "language/node"
+require "language/node"
 
 class Twain < Formula
   desc "Cross-platform Text Expander written in Rust"
