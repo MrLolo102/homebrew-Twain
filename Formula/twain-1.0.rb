@@ -9,6 +9,6 @@ class Twain < Formula
   version "1.0"
 
   def install
-    bin.install "twain"
+    bin.install "twain-1.0"
   end
 end
