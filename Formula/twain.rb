@@ -10,7 +10,7 @@ class Twain < Formula
   version "1.0"
 
   resource "twainpkg" do
-  url "https://github.com/MrLolo102/twainpkg/archive/1.0.tar.gz"
+  url "https://github.com/MrLolo102/twainpkg/releases/download/1.0/twainpkg-mac.tar.gz"
   sha256 "b030991abb643ee078d8c536baf4a96c342d6977c9c325e33cf1b1c99ed0e365"
   end
 
