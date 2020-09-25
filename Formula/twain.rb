@@ -11,7 +11,7 @@ class Twain < Formula
 
   resource "twainpkg" do
     url "https://github.com/MrLolo102/twainpkg/files/5281272/twainpkg.tar.gz"
-    sha256 "c1b4ff35db1f0aa3cdd5495d9aefb56fa98b03012c5f176bce570edb2366a046"
+    sha256 "57d0009cf45d45019e67667377e8ee0ae2dae6a48aaec373c4094f137854e077"
   end
 
   def install
