@@ -9,8 +9,8 @@ class Twain < Formula
   
   version "1.0"
 
-  resource "twainpkg" do
-    url "https://github.com/MrLolo102/twainpkg/files/5281809/test-mac.tar.gz"
+  resource "twain" do
+    url "https://github.com/MrLolo102/twain/files/5281923/test-mac.tar.gz"
     sha256 "5102fd7ce728dbfee9360450537df7b1371131d9f2110da7cd84cadae67945db"
     #sha256 "57d0009cf45d45019e67667377e8ee0ae2dae6a48aaec373c4094f137854e077"
   end
@@ -18,6 +18,6 @@ class Twain < Formula
   def install
     bin.install "twain"
 
-    resource("twainpkg").stage { bin.install "twainpkg" => "twainpkg" }
+    resource("twain").stage { bin.install "test" => "twain" }
   end
 end
