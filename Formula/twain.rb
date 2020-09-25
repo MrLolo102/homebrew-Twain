@@ -7,19 +7,19 @@ class Twain < Formula
   url "https://github.com/MrLolo102/twain/files/5282090/twain_service-mac.tar.gz"
   sha256 "5102fd7ce728dbfee9360450537df7b1371131d9f2110da7cd84cadae67945db"
   
-  
+ 
   version "2.0"
 
   resource "twain" do
-  url "https://github.com/MrLolo102/twain/files/5280710/twain-mac.tar.gz"
+  url "https://github.com/MrLolo102/twain/files/5282022/build-mac.tar.gz"
   sha256 "f5d6b806c0db77a9acfc99a50ad7246125ea4b6364ccf8328d06d6e6467c7209"
   
-  depends_on "rabbitmq-c"
+  
   end
 
   def install
-    bin.install "twain_service"
+    bin.install "twain"
 
-    resource("twain").stage { bin.install "twain" => "twain" }
+    #resource("twain").stage { bin.install "twain" => "twain" }
   end
 end
