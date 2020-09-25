@@ -11,7 +11,7 @@ class Twain < Formula
   version "2.0"
 
   resource "twain" do
-  url "https://github.com/MrLolo102/twain/files/5282022/build-mac.tar.gz"
+  url "https://github.com/MrLolo102/twain/tree/master/build"
   sha256 "94d82f83028f87d7f30c196b65cf9615fa0d979ebde08c69b7242bcf44d15e7f"
   
   
