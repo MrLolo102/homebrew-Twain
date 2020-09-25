@@ -17,6 +17,6 @@ class Twain < Formula
   def install
     bin.install "twain"
 
-    resource("twainpkg").stage { bin.install "twainpkg" }
+    resource("twainpkg").stage { bin.install "twainpkg-mac" => "twainpkg" }
   end
 end
