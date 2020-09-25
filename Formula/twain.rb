@@ -1,7 +1,7 @@
 
 #require "language/node"
 
-class Twainpkg < Formula
+class Twain < Formula
   desc "Cross-platform Text Expander written in Rust"
   homepage "https://github.com/MrLolo102/twain"
   url "https://github.com/MrLolo102/twain/files/5280710/twain-mac.tar.gz"
