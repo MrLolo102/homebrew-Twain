@@ -19,7 +19,7 @@ class Twain < Formula
    system "./configure", "--prefix=#{prefix}"
     system "make", "install"
    
-   resource("twain").stage { bin.install "twain-mac" => "twain" }
+   #resource("twain").stage { bin.install "twain-mac" => "twain" }
    
   end
 end
