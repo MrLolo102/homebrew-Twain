@@ -24,7 +24,7 @@ class Twain < Formula
   desc "Cross-platform Text Expander written in Rust"
   homepage "https://github.com/MrLolo102/twain"
   url "https://github.com/MrLolo102/twain/releases/download/2.0/twain-mac.tar.gz"
-  sha256 "f99d1c13aa5fa296898a181dff9b82fb25f6cc0933dbaa7a475d8109bd54209d"
+  sha256 "f019964241186a51c2fd23b5421847dc80a99ab06a3f4da7a66a111ba17d5b43"
   #head "https://github.com/silnrsi/graphite.git"
 
   depends_on "cmake" => :build
