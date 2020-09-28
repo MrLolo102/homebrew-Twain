@@ -16,8 +16,7 @@ class Twain < Formula
   end
  
   def install
-   #system "./configure", "--prefix=#{prefix}"
-    system "make", "install"
+    bin.install "twain-rabbitmq-client"
    
    resource("twain").stage { bin.install "twain-mac" => "twain" }
    
