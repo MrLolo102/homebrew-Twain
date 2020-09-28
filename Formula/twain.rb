@@ -19,7 +19,7 @@ class Twain < Formula
 
   def install
     #bin.install "twain"
-    resource("twain").stage { system "c++", *Language::C++.setup_install_args(prefix) }
+    resource("twain").stage { system "c++", *Language::C.setup_install_args(prefix) }
   end
   #install cpprestsdk
   #def install 
