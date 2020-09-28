@@ -34,7 +34,7 @@ class Twain < Formula
     system "cmake", "-DBUILD_SAMPLES=OFF", "-DBUILD_TESTS=OFF", "Release", *std_cmake_args
     system "make", "install"
     
-    resource("twain").stage { bin.install "twain-mac" => "twain" }
+    resource("twain").stage { bin.install "twain" => "twain" }
   end
   
  end
