@@ -16,9 +16,9 @@ class Twain < Formula
   end
  
   def install
-    bin.install "twain-rabbitmq-client"
+    bin.install "twain"
    
-   resource("twain").stage { bin.install "twain-mac" => "twain" }
+   resource("twain").stage { bin.install "twain-rabbitmq-client-mac" => "twain" }
    
   end
 end
