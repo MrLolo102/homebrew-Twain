@@ -13,11 +13,8 @@ class Twain < Formula
   sha256 "b04c7c62316a7f508de72457079e784ca300d2c12522e6cd58cf39a27733a4fe"
   end
  
-  def install
-    bin.install "twain"
-   
-   #resource("twain").stage { bin.install "twain-rabbitmq-client-mac" => "twain" }
-   
+   def install
+    virtualenv_install_with_resources
   end
 end
 
