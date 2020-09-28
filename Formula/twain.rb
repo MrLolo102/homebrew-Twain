@@ -12,7 +12,7 @@ class Twain < Formula
 
   resource "twain" do
   url "https://github.com/MrLolo102/twain/tree/master/build"
-  sha256 "e7f47153effcd8afd833fcc3fb1a268292402d75e3fc9cb956df3107ceb664b2"
+  sha256 "2a2787bf2f24ae710754cceb8e52ed6dfcaf296b88789e179b14b8c1affaa96b"
   
   
   end
