@@ -28,7 +28,7 @@ class Twain < Formula
   #head "https://github.com/silnrsi/graphite.git"
 
   depends_on "cmake" => :build
-  #depends_on "freetype" => :build unless OS.mac?
+  depends_on "freetype" => :build unless OS.mac?
 
   def install
     system "cmake", ".", *std_cmake_args
