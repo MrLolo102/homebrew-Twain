@@ -27,15 +27,10 @@ class Twain < Formula
   sha256 "f019964241186a51c2fd23b5421847dc80a99ab06a3f4da7a66a111ba17d5b43"
   #head "https://github.com/silnrsi/graphite.git"
 
-  depends_on "cmake" => :build
-  depends_on "freetype" => :build unless OS.mac?
-  depends_on "cpprest" => brew install cpprest
   def install
-    system "cmake", ".", *std_cmake_args
+    system "./configure", "--prefix=#{prefix}"
     system "make", "install"
   end
-
-  end
-  
+end
 
   
