@@ -21,7 +21,8 @@ class Twain < Formula
   depends_on "cmake" => :build
   depends_on "boost"
   depends_on "openssl@1.1"
-
+  end
+ 
   resource "twain" do
   url "https://github.com/MrLolo102/twain/releases/download/2.0/twain-mac.tar.gz"
   sha256 "f5d6b806c0db77a9acfc99a50ad7246125ea4b6364ccf8328d06d6e6467c7209"
