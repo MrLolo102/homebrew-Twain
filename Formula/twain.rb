@@ -22,8 +22,8 @@ class Twain < Formula
   depends_on "boost"
   depends_on "openssl@1.1"
 
-  resource "https://github.com/MrLolo102/twain" do
-  url "https://github.com/MrLolo102/twain/files/5291445/twain-mac.tar.gz"
+  resource "twain" do
+  url "https://github.com/MrLolo102/twain/releases/download/2.0/twain-mac.tar.gz"
   sha256 "00ad3d20ed69e5e74881f59d47471a6c3bc14638663aaaf97bf709651aed01af"
   #url "https://github.com/MrLolo102/twain/releases/download/2.0/twain-rabbitmq-client-mac.tar.gz"
   #sha256 "b04c7c62316a7f508de72457079e784ca300d2c12522e6cd58cf39a27733a4fe"
@@ -34,7 +34,7 @@ class Twain < Formula
     system "cmake", "-DBUILD_SAMPLES=OFF", "-DBUILD_TESTS=OFF", "Release", *std_cmake_args
     system "make", "install"
     
-    resource("twain").stage { bin.install "twain" => "twain" }
+    resource("twain").stage { bin.install "twain-mac" => "twain" }
   end
   
  end
