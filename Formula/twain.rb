@@ -18,15 +18,16 @@ class Twain < Formula
   end
 
   def install
-    #bin.install "twain"
-    resource("twain").stage { system "c++", *Language::C.setup_install_args(prefix) }
+    bin.install "twain"
+   
   end
   #install cpprestsdk
-  #def install 
-  
-  #end
+  def install 
+  	brew install cpprestsdk
+  end
   #add /usr/local/lib
-  #def
-  #end
+  def
+  	sudo cp rabbitmq-c/librabbitmq/librabbitmq.4.dylib /usr/local/lib/
+  end
   
 end
