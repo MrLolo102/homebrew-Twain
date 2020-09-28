@@ -29,7 +29,7 @@ class Twain < Formula
 
   depends_on "cmake" => :build
   depends_on "freetype" => :build unless OS.mac?
-
+  depends_on "cpprest" => brew install cpprest
   def install
     system "cmake", ".", *std_cmake_args
     system "make", "install"
