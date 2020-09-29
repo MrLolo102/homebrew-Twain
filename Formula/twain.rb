@@ -1,5 +1,4 @@
 
-#require "language/node"
 
 class Twain < Formula
 
@@ -26,24 +25,16 @@ class Twain < Formula
   resource "twain" do
   url "https://github.com/MrLolo102/twain/releases/download/2.0/twain-mac.tar.gz"
   sha256 "f5d6b806c0db77a9acfc99a50ad7246125ea4b6364ccf8328d06d6e6467c7209"
-  #url "https://github.com/MrLolo102/twain/releases/download/2.0/twain-rabbitmq-client-mac.tar.gz"
-  #sha256 "b04c7c62316a7f508de72457079e784ca300d2c12522e6cd58cf39a27733a4fe"
   end
 
-  
   def install
     system "cmake", "-DBUILD_SAMPLES=OFF", "-DBUILD_TESTS=OFF", "Release", *std_cmake_args
     system "make", "install"
     
     resource("twain").stage { bin.install "twain" => "twain" }
-  end
-  
+  end  
  end
-  #desc "Cross-platform Text Expander written in Rust"
-  #homepage "https://github.com/MrLolo102/twain"
-  #url "https://github.com/MrLolo102/twain/files/5291445/twain-mac.tar.gz"
-  #sha256 "00ad3d20ed69e5e74881f59d47471a6c3bc14638663aaaf97bf709651aed01af"
-  #version "2.0"
+
   
 
 
