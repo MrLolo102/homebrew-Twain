@@ -10,8 +10,9 @@ class Twain < Formula
   depends_on "cpprestsdk" 
   
   def install
-    
-    bin.install "twain"
+  
+    system "cmake", "-DBUILD_SAMPLES=OFF", "-DBUILD_TESTS=OFF", "Release", *std_cmake_args
+    system "make", "install"
     
   end
 end
