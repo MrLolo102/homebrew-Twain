@@ -7,14 +7,11 @@ class Twain < Formula
   sha256 "00ad3d20ed69e5e74881f59d47471a6c3bc14638663aaaf97bf709651aed01af"
   version "2.0"
   
-  depends_on "cmake" => [:build, :test]
-  depends_on "cpprestsdk" 
+
+  depends_on "cpprestsdk" => [:build]
   
   def install
-  
-    system "cmake", "..", *std_cmake_args
-    system "make", "install"
-    #bin.install "twain"
+    bin.install "twain"
   end
 end
   
