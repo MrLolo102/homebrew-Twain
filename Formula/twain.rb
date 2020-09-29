@@ -1,6 +1,7 @@
 
 
 class Twain < Formula
+
   desc "Cross-platform Text Expander written in Rust"
   homepage "https://github.com/telred-llc/twain"
   url "https://github.com/telred-llc/twain/files/5298063/twain-mac.tar.gz"
