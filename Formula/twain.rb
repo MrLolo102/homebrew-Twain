@@ -7,36 +7,12 @@ class Twain < Formula
   sha256 "00ad3d20ed69e5e74881f59d47471a6c3bc14638663aaaf97bf709651aed01af"
   version "2.0"
   
-  resource "cpprestsdk" do 
-  url "https://github.com/Microsoft/cpprestsdk.git",
-      tag:      "v2.10.16",
-      revision: "18212a2a7967e12d740bfb957e500892b3463c88"
-  license "MIT"
-  head "https://github.com/Microsoft/cpprestsdk.git", branch: "development"
-
-  bottle do
-    cellar :any
-    sha256 "0b7d717716ebc8393007599ed02f9a4f8b36eef1f3dd3d54d11b0966751a4f87" => :catalina
-    sha256 "feeabdfce6c4a065961f37c38578d626a50f8e7a3939343a6ed037f535418a02" => :mojave
-    sha256 "f98e8ff4c5b371ffe541eb1fefc13a178b02c07e6fab906fd206e6c833827dfa" => :high_sierra
-  end
-
-  depends_on "cmake" => :build
-  depends_on "boost"
-  depends_on "openssl@1.1"
-     
-     
-     
   def install
     
     bin.install "twain"
     
-    resource("cpprestsdk").stage { system "cmake", "-DBUILD_SAMPLES=OFF",
-                                          "-DBUILD_TESTS=OFF", "Release", *std_cmake_args
-                                   system "make", "install" }
   end
-  
- end
+end
   
   
  
