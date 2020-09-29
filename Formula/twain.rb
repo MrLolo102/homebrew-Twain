@@ -9,7 +9,7 @@ class Twain < Formula
   
   depends_on "cmake" => :build
   depends_on "cpprestsdk" => :build
-  
+  depends_on "rabbitmq-c"
   def install
     bin.install "twain"
   end
