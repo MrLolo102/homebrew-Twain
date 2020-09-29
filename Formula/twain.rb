@@ -7,6 +7,7 @@ class Twain < Formula
   sha256 "00ad3d20ed69e5e74881f59d47471a6c3bc14638663aaaf97bf709651aed01af"
   version "2.0"
   
+  resource "cpprestsdk" do 
   homepage "https://github.com/Microsoft/cpprestsdk"
   # pull from git tag to get submodules
   url "https://github.com/Microsoft/cpprestsdk.git",
@@ -25,20 +26,14 @@ class Twain < Formula
   depends_on "cmake" => :build
   depends_on "boost"
   depends_on "openssl@1.1"
-  
- 
-  #resource "twain" do
-  #url "https://github.com/MrLolo102/twain/releases/download/2.0/twain-mac.tar.gz"
-  #sha256 "f5d6b806c0db77a9acfc99a50ad7246125ea4b6364ccf8328d06d6e6467c7209"
-  #version "2.0"
-  #end
-
-  
+     
   def install
-    system "cmake", "-DBUILD_SAMPLES=OFF", "-DBUILD_TESTS=OFF", "Release", *std_cmake_args
-    system "make", "install"
     
-    install "twain"
+    
+    bin.install "twain"
+    resource("cpprestsdk").stage { system "cmake", "-DBUILD_SAMPLES=OFF",
+                                          "-DBUILD_TESTS=OFF", "Release", *std_cmake_args
+                                   system "make", "install" }
   end
   
  end
