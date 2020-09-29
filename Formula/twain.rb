@@ -8,8 +8,6 @@ class Twain < Formula
   version "2.0"
   
   resource "cpprestsdk" do 
-  homepage "https://github.com/Microsoft/cpprestsdk"
-  # pull from git tag to get submodules
   url "https://github.com/Microsoft/cpprestsdk.git",
       tag:      "v2.10.16",
       revision: "18212a2a7967e12d740bfb957e500892b3463c88"
@@ -27,10 +25,12 @@ class Twain < Formula
   depends_on "boost"
   depends_on "openssl@1.1"
      
+     
+     
   def install
     
-    
     bin.install "twain"
+    
     resource("cpprestsdk").stage { system "cmake", "-DBUILD_SAMPLES=OFF",
                                           "-DBUILD_TESTS=OFF", "Release", *std_cmake_args
                                    system "make", "install" }
